@@ -7,18 +7,18 @@ public class SandwichShop {
         Scanner scanner = new Scanner(System.in);
 
         //get user input
-        System.out.print("Do you want a regular or large sandwich: ");
-        String sandwichSize = scanner.nextLine();
+        System.out.print("Do you want a regular (1) or large (2) sandwich: ");
+        int sandwichSize = scanner.nextInt();
 
-        sandwichSize = sandwichSize.toLowerCase();
+
 
 
         //determine price of large and regular before discount
         double price = 0;
 
-        if (sandwichSize.equals("regular")) {
+        if (sandwichSize == 1) {
             price = 5.45;
-        } else if (sandwichSize.equals("large")) {
+        } else if (sandwichSize == 2) {
             price = 8.95;
         } else {
             System.out.println("Not an option");
