@@ -7,7 +7,7 @@ public class SandwichShop {
         Scanner scanner = new Scanner(System.in);
 
         //get user input
-        System.out.println("Do you want a regular or large sandwich");
+        System.out.print("Do you want a regular or large sandwich: ");
         String sandwichSize = scanner.nextLine();
 
         sandwichSize = sandwichSize.toLowerCase();
@@ -27,7 +27,7 @@ public class SandwichShop {
 
 
         //determine discount
-        System.out.println("How old are you: ");
+        System.out.print("How old are you: ");
         int age = scanner.nextInt();
 
         double discount = 0;
@@ -44,7 +44,7 @@ public class SandwichShop {
         //find and print final price
         double finalPrice = price - (price * discount);
 
-        System.out.printf("your final price is: $%.2f", finalPrice);
+        System.out.printf("%nyour final price is: $%.2f%n", finalPrice);
 
         scanner.close();
 
