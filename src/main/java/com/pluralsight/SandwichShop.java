@@ -14,7 +14,7 @@ public class SandwichShop {
 
 
         //determine price of large and regular before discount
-        double price;
+        double price = 0;
 
         if (sandwichSize.equals("regular")) {
             price = 5.45;
@@ -23,7 +23,7 @@ public class SandwichShop {
         } else {
             System.out.println("Not an option");
         }
-        scanner.close();
+
 
 
         //determine discount
@@ -33,15 +33,21 @@ public class SandwichShop {
         double discount = 0;
 
         if (age <= 17) {
-            discount = .1
+            discount = .1;
         } else if (age >= 65) {
-            discount = .2
+            discount = .2;
         } else {
-            discount = 0
+            discount = 0;
         }
 
+
         //find and print final price
-        double finalPrice = price - (price * discount)
+        double finalPrice = price - (price * discount);
+
+        System.out.printf("your final price is: $%.2f", finalPrice);
+
+        scanner.close();
+
 
     }
 }
