@@ -14,10 +14,12 @@ public class SandwichShop {
 
 
         //determine price of large and regular before discount
+        double price;
+
         if (sandwichSize.equals("regular")) {
-            double regularSizePrice = 5.45;
+            price = 5.45;
         } else if (sandwichSize.equals("large")) {
-            double largeSizePrice = 8.95;
+            price = 8.95;
         } else {
             System.out.println("Not an option");
         }
@@ -39,7 +41,7 @@ public class SandwichShop {
         }
 
         //find and print final price
-
+        double finalPrice = price - (price * discount)
 
     }
 }
