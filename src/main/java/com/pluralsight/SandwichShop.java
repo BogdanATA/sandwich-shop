@@ -13,7 +13,7 @@ public class SandwichShop {
         sandwichSize = sandwichSize.toLowerCase();
 
 
-        //determine price of large and regular
+        //determine price of large and regular before discount
         if (sandwichSize.equals("regular")) {
             double regularSizePrice = 5.45;
         } else if (sandwichSize.equals("large")) {
@@ -21,6 +21,25 @@ public class SandwichShop {
         } else {
             System.out.println("Not an option");
         }
+        scanner.close();
+
+
+        //determine discount
+        System.out.println("How old are you: ");
+        int age = scanner.nextInt();
+
+        double discount = 0;
+
+        if (age <= 17) {
+            discount = .1
+        } else if (age >= 65) {
+            discount = .2
+        } else {
+            discount = 0
+        }
+
+        //find and print final price
+
 
     }
 }
